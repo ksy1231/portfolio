@@ -14,16 +14,85 @@
 <header class="hero text-center">
     <h1 class="hero-title">Soo Yun Kim</h1>
     <p class="hero-subtitle">Software Engineer | Web & Application Developer</p>
-    <a href="#projects" class="btn btn-primary btn-lg hero-btn">View My Work</a>
+    <a href="resume.pdf" target="_blank" class="btn btn-primary btn-lg hero-btn">Download Resume</a>
 </header>
 
 <!-- About Section -->
 <section class="about container my-5">
     <h2 class="section-title text-center mb-4">About Me</h2>
     <p class="text-center mx-auto" style="max-width: 700px;">
-        I am a software engineer with 5+ years of experience in building enterprise applications, 
-        optimizing performance, and integrating third-party APIs. Passionate about modern web technologies and creating elegant user experiences.
+        Hi, I’m a software engineer with 5 years of experience building scalable, 
+        user-friendly applications using C#, .NET, Java, MSSQL, and AWS, 
+        with a passion for optimizing performance and creating practical, elegant solutions.
     </p>
+</section>
+
+<!-- Skills Section --> 
+<section class="section skills bg-light text-dark py-5"> 
+    <div class="container"> 
+        <h2 class="section-title text-center mb-5">Skills</h2> 
+
+        <!-- Languages -->
+        <div class="skill-category">
+            <h5>Languages:</h5>
+            <p>
+                <span>C#</span><span>Java</span><span>JavaScript</span>
+                <span>JSP</span><span>HTML/CSS</span><span>VBScript</span>
+                <span>C++</span><span>Python</span><span>SQL</span>
+            </p>
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-category">
+            <h5>Frameworks:</h5>
+            <p>
+                <span>ASP .NET</span><span>.NET</span><span>Spring</span>
+                <span>WPF</span><span>WinForms</span>
+            </p>
+        </div>
+
+        <!-- Data Formats -->
+        <div class="skill-category">
+            <h5>Data Formats:</h5>
+            <p>
+                <span>XML</span><span>JSON</span>
+            </p>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-category">
+            <h5>Databases:</h5>
+            <p>
+                <span>MSSQL</span><span>Oracle</span><span>MariaDB</span>
+            </p>
+        </div>
+
+        <!-- Cloud -->
+        <div class="skill-category">
+            <h5>Cloud:</h5>
+            <p>
+                <span>AWS (CloudFront, EC2, S3, Route 53)</span>
+            </p>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category">
+            <h5>Tools:</h5>
+            <p>
+                <span>Git</span><span>SVN</span><span>Jira</span>
+                <span>Visual Studio</span><span>Visual Studio Code</span><span>Eclipse</span>
+            </p>
+        </div>
+
+        <!-- Systems -->
+        <div class="skill-category">
+            <h5>Systems:</h5>
+            <p>
+                <span>MES</span><span>CRM</span><span>Delivery Management System</span>
+                <span>S&OP</span><span>Groupware</span><span>WMS</span>
+            </p>
+        </div>
+    </div> 
 </section>
 
 <!-- Projects Section -->
@@ -32,17 +101,17 @@
     <div class="row g-4">
         <div class="col-md-4">
             <div class="card project-card h-100 shadow-sm">
-                <img src="images/project1.png" class="card-img-top" alt="Project 1">
+                <!--img src="images/project1.png" class="card-img-top" alt="Project 1"-->
                 <div class="card-body">
                     <h5 class="card-title">E-commerce Website</h5>
                     <p class="card-text">Built with Spring Boot & Paymentwall integration, featuring dynamic product pages and checkout flow.</p>
-                    <a href="#" class="btn btn-outline-primary w-100">View Project</a>
+                    <a href="https://ecommerce-mq0e.onrender.com" class="btn btn-outline-primary w-100">View Project</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card project-card h-100 shadow-sm">
-                <img src="images/project2.png" class="card-img-top" alt="Project 2">
+                <!--img src="images/project2.png" class="card-img-top" alt="Project 2"-->
                 <div class="card-body">
                     <h5 class="card-title">CRM System</h5>
                     <p class="card-text">Customer management system with reporting and API integrations to improve workflow efficiency.</p>
@@ -52,7 +121,7 @@
         </div>
         <div class="col-md-4">
             <div class="card project-card h-100 shadow-sm">
-                <img src="images/project3.png" class="card-img-top" alt="Project 3">
+                <!--img src="images/project3.png" class="card-img-top" alt="Project 3"-->
                 <div class="card-body">
                     <h5 class="card-title">Delivery Management App</h5>
                     <p class="card-text">Mobile-friendly web app for tracking deliveries and managing drivers, with real-time updates.</p>
@@ -63,37 +132,13 @@
     </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact container my-5">
-    <h2 class="section-title text-center mb-4">Contact Me</h2>
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form action="#" method="post" class="contact-form bg-light p-4 rounded shadow-sm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input id="name" name="name" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input id="email" name="email" type="email" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
 <!-- Footer -->
 <footer class="footer text-center py-4">
     <p>&copy; 2025 Soo Yun Kim. All Rights Reserved.</p>
     <div>
-        <a href="#" class="me-3">LinkedIn</a>
-        <a href="#" class="me-3">GitHub</a>
-        <a href="#">Email</a>
+        <a href="https://www.linkedin.com/in/sooyun-kim" class="me-3">LinkedIn</a>
+        <a href="https://github.com/ksy1231" class="me-3">GitHub</a>
+        <a href="mailto:kimsy9512@gmail.com">Email</a>
     </div>
 </footer>
 

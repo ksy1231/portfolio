@@ -1,65 +1,152 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500&display=swap');
+
 /* Fonts & Body */
 body {
-    font-family: 'Inter', sans-serif;
-    background: #f5f7fa;
+    font-family: 'Roboto', sans-serif;
+    background: #fdfdfd;
     color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 /* Hero Section */
 .hero {
     padding: 120px 20px;
-    background: linear-gradient(135deg, #6c63ff, #42a5f5);
+    background: linear-gradient(135deg, #5c4eff, #42a5f5);
     color: white;
+    text-align: center;
 }
 .hero-title {
-    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 56px;
     font-weight: 800;
     margin-bottom: 15px;
 }
-.hero-subtitle {
-    font-size: 20px;
+.hero-sub {
+    font-size: 22px;
+    font-weight: 500;
     opacity: 0.9;
     margin-bottom: 30px;
 }
-.hero-btn {
+.btn-resume {
     border-radius: 12px;
     font-weight: 600;
     padding: 14px 28px;
+    background: #ff6b6b;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.btn-resume:hover {
+    background: #ff5252;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
 /* Section Titles */
 .section-title {
-    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
-/* Projects Cards */
-.project-card {
+/* Section Text */
+.section-text {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Skills Section - Category Cards */
+.skills .skill-category {
+    background: #fff;
     border-radius: 16px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.skills .skill-category h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #5c4eff;
+}
+
+.skills .skill-category p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Optional: make each skill in the paragraph stand out */
+.skills .skill-category p span {
+    display: inline-block;
+    background: #e3e8ff;
+    color: #1a1a1a;
+    padding: 5px 10px;
+    border-radius: 12px;
+    margin: 3px 5px 3px 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 0;
+}
+.project-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
-.project-card img {
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+.project-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.project-desc {
+    font-size: 16px;
+    color: #555;
 }
 
-/* Contact Form */
-.contact-form {
-    border-radius: 16px;
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    text-align: center;
 }
-.contact-form input, .contact-form textarea {
-    border-radius: 8px;
+.contact a {
+    color: #5c4eff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 .footer {
     background: #222;
     color: #fff;
+    padding: 40px 0;
+    text-align: center;
 }
 .footer a {
     color: #fff;
@@ -68,4 +155,12 @@ body {
 }
 .footer a:hover {
     opacity: 1;
+}
+
+/* Utility Adjustments */
+.section {
+    padding: 80px 0;
+}
+.bg-light {
+    background: #f8f9fa !important;
 }
