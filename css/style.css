@@ -1,166 +1,295 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500&display=swap');
-
-/* Fonts & Body */
-body {
-    font-family: 'Roboto', sans-serif;
-    background: #fdfdfd;
-    color: #333;
-    line-height: 1.6;
+html {
     scroll-behavior: smooth;
+    /* 내비바가 sticky인 경우, 섹션 제목이 가려지지 않게 여백을 줍니다. */
+    scroll-padding-top: 80px; 
 }
 
-/* Hero Section */
-.hero {
-    padding: 120px 20px;
-    background: linear-gradient(135deg, #5c4eff, #42a5f5);
-    color: white;
-    text-align: center;
+/* 기본 설정 및 배경색 (이미지 특유의 연회색 배경) */
+body {
+    background-color: #f0f2f5; 
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
-.hero-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 56px;
-    font-weight: 800;
-    margin-bottom: 15px;
+
+/* 내비게이션 바 - 진한 다크 네이비 */
+.navbar {
+    background-color: #1a237e !important; 
+    padding: 15px 0;
 }
-.hero-sub {
-    font-size: 22px;
-    font-weight: 500;
-    opacity: 0.9;
-    margin-bottom: 30px;
-}
-.btn-resume {
-    border-radius: 12px;
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
     font-weight: 600;
-    padding: 14px 28px;
-    background: #ff6b6b;
-    border: none;
-    color: white;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-.btn-resume:hover {
-    background: #ff5252;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+.btn-hire {
+    background-color: #ffffff;
+    color: #1a237e !important;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px 15px;
 }
 
-/* Section Titles */
+/* 메인 컨테이너 간격 */
+.main-wrapper {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* 섹션 공통 카드 스타일 (이미지의 하얀 박스들) */
+.content-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+    border: 1px solid #edf2f7;
+}
+
+/* 타이틀 색상 - 이미지와 동일한 블루 */
+.hero-title {
+    color: #283593;
+    font-weight: 800;
+}
+
 .section-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a237e;
+    margin-bottom: 0;
 }
 
-/* Section Text */
-.section-text {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
+/* 버튼 및 링크 색상 */
+.btn-primary {
+    background-color: #4472c4 !important;
+    border: none;
+    padding: 10px 20px;
 }
-
-/* Skills Section - Category Cards */
-.skills .skill-category {
-    background: #fff;
-    border-radius: 16px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.skills .skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.skills .skill-category h5 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #5c4eff;
-}
-
-.skills .skill-category p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-}
-
-/* Optional: make each skill in the paragraph stand out */
-.skills .skill-category p span {
-    display: inline-block;
-    background: #e3e8ff;
-    color: #1a1a1a;
-    padding: 5px 10px;
-    border-radius: 12px;
-    margin: 3px 5px 3px 0;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-/* Projects Section */
-.projects {
-    padding: 80px 0;
-}
-.project-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-.project-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-.project-desc {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Contact Section */
-.contact {
-    padding: 80px 0;
-    text-align: center;
-}
-.contact a {
-    color: #5c4eff;
+.social-link {
+    color: #4472c4;
     text-decoration: none;
     font-weight: 500;
+    margin-right: 20px;
 }
-.contact a:hover {
-    text-decoration: underline;
+
+/* About Me 프로필 이미지 (완벽한 원형 + 회색 외곽선) */
+.profile-img-wrapper {
+    width: 200px;
+    height: 200px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+}
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* Impact 섹션 수치 카드 (가로 배열) */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* 선처럼 보이게 하는 기법 */
+    background: #edf2f7; 
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #edf2f7;
+}
+
+.impact-item {
+    background: white;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.impact-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #3a47d5;
+    margin-bottom: 5px;
+}
+
+.impact-label {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 600;
+}
+
+/* 스킬 배지 (연한 회색 배경의 알약 형태) */
+.skills-modern-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-category-box {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+}
+
+.skill-category-box h6 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #334155;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-category-box h6 i {
+    color: #3a47d5;
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-pills span {
+    background: white;
+    color: #475569;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    transition: all 0.2s;
+}
+
+.skill-pills span:hover {
+    border-color: #3a47d5;
+    color: #3a47d5;
+    transform: translateY(-2px);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr); /* 모바일에서는 2개씩 */
+    }
+    .skill-row {
+        flex-direction: column; /* 모바일에서는 세로로 나열 */
+    }
+    .skill-category-label {
+        margin-bottom: 10px;
+    }
+}
+
+/* 프로젝트 내부 카드 */
+.project-item-card {
+    background: #f8fafc; /* Skills 섹션 박스와 동일한 배경색 */
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.project-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: #3a47d5;
+}
+
+.project-body h6 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 12px;
+}
+
+.project-body p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 60px; /* 카드 높이를 일정하게 맞춤 */
+}
+
+/* 프로젝트 태그 - Skills 태그와 통일 */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    background: white;
+    color: #3a47d5;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+}
+
+/* 버튼 스타일 - Hero 섹션 버튼과 조화 */
+.btn-project-primary {
+    background-color: #3a47d5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.btn-project-primary:hover {
+    background-color: #1a237e;
+    color: white;
+}
+
+.btn-project-outline {
+    background-color: transparent;
+    color: #94a3b8;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 /* Footer */
-.footer {
-    background: #222;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-}
-.footer a {
-    color: #fff;
-    opacity: 0.8;
-    text-decoration: none;
-}
-.footer a:hover {
-    opacity: 1;
+.footer-section {
+    padding: 60px 0;
+    background-color: #f1f3f5; /* 전체 배경색과 동일하게 하거나 약간 더 진하게 */
+    border-top: 1px solid #e2e8f0;
+    margin-top: 50px;
 }
 
-/* Utility Adjustments */
-.section {
-    padding: 80px 0;
+.footer-links a {
+    font-size: 1.5rem;
+    color: #64748b;
+    margin: 0 15px;
+    transition: color 0.2s ease;
 }
-.bg-light {
-    background: #f8f9fa !important;
+
+.footer-links a:hover {
+    color: #3a47d5; /* 포인트 블루 색상 */
+}
+
+.copyright {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 5px;
+}
+
+.footer-subtext {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
 }
