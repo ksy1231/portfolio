@@ -22,12 +22,12 @@
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <i class="fa-solid fa-square-p text-blue-600 text-3xl"></i>
-                <h1 class="text-2xl font-bold text-gray-800">ParkFree</h1>
+                <h1 class="text-2xl font-bold text-gray-800">FreeLot</h1>
             </div>
             <nav class="hidden md:flex gap-8 text-gray-600 font-medium">
                 <a href="#" class="hover:text-blue-600">Features</a>
                 <a href="#" class="hover:text-blue-600">Tech Stack</a>
-                <a href="#" class="hover:text-blue-600">GitHub</a>
+                <a href="https://github.com/ksy1231/FreeLot" class="hover:text-blue-600">GitHub</a>
             </nav>
             <button
                 class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Coming
@@ -117,8 +117,88 @@
         </div>
     </section>
 
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-red-500">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">
+                        <i class="fa-solid fa-triangle-exclamation text-red-500 mr-2"></i> The Problem
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        In dense urban areas like Toronto, drivers spend an average of 10–20 minutes circling blocks just to
+                        find a parking spot. Most navigation apps prioritize paid parking lots, making it difficult for
+                        users to identify free street parking or retail lots with complimentary time slots in real-time.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-green-500">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">
+                        <i class="fa-solid fa-lightbulb text-green-500 mr-2"></i> The Solution
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        FreeLot leverages <strong>Google Places API v1</strong> to filter and extract free parking metadata.
+                        Beyond simple coordinates, it integrates the <strong>Google Routes API</strong> to calculate actual
+                        walking durations from the parking spot to the final destination, providing the most practical
+                        options for the user.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-16 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-12">Architecture & Tech Stack</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium border border-blue-100">React
+                    Native (Expo)</span>
+                <span
+                    class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium border border-blue-100">TypeScript</span>
+                <span
+                    class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium border border-blue-100">Node.js</span>
+                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium border border-blue-100">Supabase
+                    (Auth/DB)</span>
+                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium border border-blue-100">Google
+                    Places API v1</span>
+                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium border border-blue-100">Google
+                    Routes API</span>
+                <span class="bg-blue-50 text-blue-700 px-4 py-2 rounded-full font-medium border border-blue-100">Cloudflare
+                    Pages</span>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-12 text-center">Technical Challenges & Solutions</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="font-bold text-blue-600 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-gears"></i> API Cost Optimization
+                    </h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        To minimize excessive API billing, I implemented a <strong>Debounce algorithm</strong> for map
+                        movement and a <strong>radius-based trigger logic</strong>. The app only fetches new data when the
+                        user moves beyond a specific distance threshold from the previous search center, successfully
+                        reducing unnecessary API calls by approximately 40%.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="font-bold text-blue-600 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-code-merge"></i> Cross-Platform Architecture
+                    </h4>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        I decoupled core business logic (filtering algorithms and API wrappers) from the UI layer to
+                        maximize code reusability between Web and Mobile. By utilizing <strong>Platform-specific file
+                            extensions</strong>, I managed environment-unique behaviors while maintaining a single
+                        TypeScript codebase for shared logic.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="py-8 text-center text-gray-400 text-xs border-t">
-        &copy; 2026 ParkFree Project Portfolio. Powered by Google Places API v1.
+        &copy; 2026 FreeLot Project Portfolio. Powered by Google Places API v1.
     </footer>
 
 </body>

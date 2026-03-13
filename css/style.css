@@ -72,6 +72,46 @@ body {
     margin-right: 20px;
 }
 
+/* Headline 강조 */
+.hero-headline {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tech Line 스타일 */
+.tech-line {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* 소셜 아이콘 호버 효과 */
+.social-link {
+    font-size: 1.5rem;
+    color: #6c757d;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #0d6efd;
+    /* 메인 브랜드 컬러 */
+    transform: translateY(-3px);
+}
+
+.btn-resume {
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
 /* About Me 프로필 이미지 (완벽한 원형 + 회색 외곽선) */
 .profile-img-wrapper {
     width: 200px;
